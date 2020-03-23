@@ -1,0 +1,6 @@
+#!/bin/sh
+
+./gradlew build
+docker build -f Dockerfile -t sample:sample .
+docker run --name sample -p 8080:8080 -d sample:sample
+
